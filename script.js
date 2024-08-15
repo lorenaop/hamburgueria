@@ -185,16 +185,14 @@ checkoutBtn.addEventListener("click", function(){
 })
 
 //Verificar a hora e manipular o card horario
-
-
-const spanItem = document.getElementById("date-span")
-const isOpen = checkRestaurantOpen();
-
 function checkRestaurantOpen(){
     const data = new Date();
     const hora = data.getHours();
     return hora >= 18 && hora < 22;
 }
+
+const spanItem = document.getElementById("date-span")
+const isOpen = checkRestaurantOpen();
 
 if(isOpen){
     spanItem.classList.remove("bg-red-900")
